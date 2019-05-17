@@ -8,20 +8,20 @@ import './App.css';
 // 2. Use map to render the list
 // 3. Refactor into multiple components if needed 
 
-// const taskItems = [
-//   {
-//     id: 1,
-//     body: 'one'
-//   },
-//   {
-//     id: 2,
-//     body: 'two'
-//   },
-//   {
-//     id: 3,
-//     body: 'three'
-//   }
-// ]
+const taskItems = [
+  {
+    id: 1,
+    body: 'Take out the trash'
+  },
+  {
+    id: 2,
+    body: 'Do the dishes'
+  },
+  {
+    id: 3,
+    body: 'Study'
+  }
+]
 
 function SearchBar() {
   return (
@@ -29,22 +29,32 @@ function SearchBar() {
   )
 }
 
-function TaskHolder() {
+function TaskHolder(props) {
+  // const filteredList = props.taskList;
+
+  const tasks = props.taskList.map(task =>
+    <li key={task.id}>
+      {task.body}
+    </li>
+  );
+
   return (
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      {tasks}
     </ul>
   )
 }
 
 class FilterList extends Component {
+  state = {
+    taskList: taskItems
+  }
+
   render() {
     return (
       <div>
         <SearchBar />
-        <TaskHolder />
+        <TaskHolder taskList={taskItems} />
       </div>
     );
   }
