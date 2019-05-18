@@ -11,7 +11,14 @@ input {
   border: 0;
   box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
   padding: 1rem;
+  margin-bottom: 0.5rem;
 }
+
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 
 ul {
   list-style: none;
