@@ -43,8 +43,9 @@ class FilterList extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    const uuidv4 = require('uuid/v4');
     this.setState({
-      taskList: [{id: 4, body: this.state.newTaskName}, ...this.state.taskList],
+      taskList: [{id: uuidv4(), body: this.state.newTaskName}, ...this.state.taskList],
       newTaskName: ''
     });
   }
