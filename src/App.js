@@ -23,16 +23,22 @@ const taskItems = [
   }
 ]
 
-function SearchBar() {
+function SearchBar(props) {
   return (
-    <input type="text" placeholder="Search a task..."></input>
+    <input 
+      type="text" 
+      value={props.value}
+      onChange={props.onChange}
+      placeholder="Search a task..." />
   )
 }
 
 function TaskHolder(props) {
-  // const filteredList = props.taskList;
+  const filteredList = props.taskList.filter(item =>
+    item.body.toLowerCase().includes(props.searchTerm.toLowerCase())
+  );
 
-  const tasks = props.taskList.map(task =>
+  const tasks = filteredList.map(task =>
     <li key={task.id}>
       {task.body}
     </li>
@@ -47,14 +53,25 @@ function TaskHolder(props) {
 
 class FilterList extends Component {
   state = {
-    taskList: taskItems
+    taskList: taskItems,
+    searchTerm: ''
+  }
+
+  handleChange = (e) => {
+    this.setState({searchTerm: e.target.value});
   }
 
   render() {
     return (
       <div>
-        <SearchBar />
-        <TaskHolder taskList={taskItems} />
+        <SearchBar 
+          value={this.state.searchTerm}
+          onChange={this.handleChange} 
+          />
+        <TaskHolder 
+          taskList={this.state.taskList} 
+          searchTerm={this.state.searchTerm}
+          />
       </div>
     );
   }
