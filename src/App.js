@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import SearchBar from './components/search'
-import TaskHolder from './components/tasks'
+import SearchBar from './components/search';
+import TaskHolder from './components/tasks';
 import './App.css';
 
 // At first, render static data only!
 
 // Today's goals:
-// 1. Create static filterable list
-// 2. Use map to render the list
-// 3. Refactor into multiple components if needed 
+// 1. Add to-do items using input 
 
 const taskItems = [
   {
@@ -25,14 +23,44 @@ const taskItems = [
   }
 ]
 
+function CreateItem(props) {
+  return (
+    <form onSubmit={props.onSubmit}>
+      <input
+        type="text"
+        placeholder="Add items here..."
+        onChange={props.onChange}
+        value={props.value}
+        />
+      <input 
+        type="submit"
+        value="Create"
+         />
+    </form>
+  )
+}
+
 class FilterList extends Component {
   state = {
     taskList: taskItems,
-    searchTerm: ''
+    searchTerm: '',
+    newTaskName: '',
   }
 
   handleChange = (e) => {
     this.setState({searchTerm: e.target.value});
+  }
+
+  handleMake = (e) => {
+    this.setState({newTaskName: e.target.value})
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({
+      taskList: [{id: 4, body: this.state.newTaskName}, ...this.state.taskList],
+      newTaskName: ''
+    });
   }
 
   render() {
@@ -41,6 +69,11 @@ class FilterList extends Component {
         <SearchBar 
           value={this.state.searchTerm}
           onChange={this.handleChange} 
+          />
+        <CreateItem 
+          onSubmit={this.handleSubmit}
+          onChange={this.handleMake}
+          value={this.state.newTaskName}
           />
         <TaskHolder 
           taskList={this.state.taskList} 
