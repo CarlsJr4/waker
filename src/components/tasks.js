@@ -2,7 +2,9 @@ import React from 'react';
 
 function TaskHolder(props) {
     const filteredList = props.taskList.filter(item =>
-      item.body.toLowerCase().includes(props.searchTerm.toLowerCase())
+      item.body
+        .toLowerCase()
+        .includes(props.searchTerm.toLowerCase())
     );
   
     const tasks = filteredList.map(task =>
