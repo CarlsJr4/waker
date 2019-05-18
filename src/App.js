@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './components/search';
 import TaskHolder from './components/tasks';
+import CreateItem from './components/createitem';
 import './App.css';
 
 // At first, render static data only!
@@ -23,22 +24,7 @@ const taskItems = [
   }
 ]
 
-function CreateItem(props) {
-  return (
-    <form onSubmit={props.onSubmit}>
-      <input
-        type="text"
-        placeholder="Add items here..."
-        onChange={props.onChange}
-        value={props.value}
-        />
-      <input 
-        type="submit"
-        value="Create"
-         />
-    </form>
-  )
-}
+
 
 class FilterList extends Component {
   state = {
