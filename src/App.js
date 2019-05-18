@@ -42,6 +42,11 @@ class FilterList extends Component {
   }
 
   handleSubmit = (e) => {
+    if (!this.state.newTaskName.length) {
+      e.preventDefault();
+      alert("You can't submit an empty task.");
+      return
+    }
     e.preventDefault();
     const uuidv4 = require('uuid/v4');
     this.setState({
