@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SearchBar from './components/search'
+import TaskHolder from './components/tasks'
 import './App.css';
 
 // At first, render static data only!
@@ -22,34 +24,6 @@ const taskItems = [
     body: 'Study'
   }
 ]
-
-function SearchBar(props) {
-  return (
-    <input 
-      type="text" 
-      value={props.value}
-      onChange={props.onChange}
-      placeholder="Search a task..." />
-  )
-}
-
-function TaskHolder(props) {
-  const filteredList = props.taskList.filter(item =>
-    item.body.toLowerCase().includes(props.searchTerm.toLowerCase())
-  );
-
-  const tasks = filteredList.map(task =>
-    <li key={task.id}>
-      {task.body}
-    </li>
-  );
-
-  return (
-    <ul>
-      {tasks}
-    </ul>
-  )
-}
 
 class FilterList extends Component {
   state = {
