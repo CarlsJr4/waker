@@ -2,10 +2,6 @@
   --peach: rgb(255, 144, 125);
 }
 
-#root {
-  margin: 25%;
-}
-
 input {
   width: 100%;
   border: 0;
