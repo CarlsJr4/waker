@@ -46,6 +46,13 @@ class FilterList extends Component {
     this.setState({newTaskName: e.target.value})
   }
 
+  handleDelete = (e) => {
+    this.setState({taskList:
+      this.state.taskList.filter(item =>
+        item.id.toString() !== e.target.dataset.key.toString()) // We use .toString() so we can use !== 
+    })
+  }
+
   handleSubmit = (e) => {
     if (!this.state.newTaskName.length) {
       e.preventDefault();
@@ -60,6 +67,12 @@ class FilterList extends Component {
       newTaskName: ''
     });
   }
+
+  // How can we make clicking the trash icon delete the item from the state?
+  // The task items live in this component
+  // When clicked, get ID of item, filter all list items that don't match the ID 
+  // Add click event listener to each trash can 
+  // Add data-key attribute to each trash can?
 
   render() {
     return (
@@ -77,6 +90,7 @@ class FilterList extends Component {
         <TaskHolder 
           taskList={this.state.taskList} 
           searchTerm={this.state.searchTerm}
+          onClick={this.handleDelete}
           />
       </div>
     );

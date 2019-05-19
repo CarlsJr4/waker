@@ -10,7 +10,7 @@ function TaskHolder(props) {
     const tasks = filteredList.map(task =>
       <li key={task.id}>
         {task.body}
-        <i class="fas fa-trash"></i>
+        <i className="fas fa-trash" data-key={task.id} onClick={props.onClick}></i>
       </li>
     );
   
