@@ -37,6 +37,13 @@ li {
 .fa-trash {
   position: absolute;
   right: 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  transition: transform 50ms;
+  transform: scale(1.2);
 }
 
 
