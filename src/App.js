@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import FilterList from './components/filterlist';
+import Calendar from './components/calendar';
 import './App.css';
 
 // Today's goals:
@@ -13,7 +14,10 @@ import './App.css';
 
 function App() {
   return (
-    <FilterList />
+    <Fragment>
+      <Calendar />
+      <FilterList />
+    </Fragment>
   )
 }
 
