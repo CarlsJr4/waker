@@ -27,9 +27,17 @@ ul {
 
 li {
   margin-bottom: 1rem;
+  position: relative;
   color: white;
   background: var(--peach);
   padding: 1.5rem;
   border-radius: 5px;
 }
+
+.fa-trash {
+  position: absolute;
+  right: 25px;
+}
+
+
 

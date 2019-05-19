@@ -4,10 +4,15 @@ import TaskHolder from './components/tasks';
 import CreateItem from './components/createitem';
 import './App.css';
 
-// At first, render static data only!
-
 // Today's goals:
-// 1. Add to-do items using input 
+// 1. Delete list items
+// 2. Add easy buttons to delete input?
+
+// Future goals:
+// 1. Edit list items
+// 2. Change color of list items
+// 3. Add cursor: pointer to all list items 
+// 4. Favorite tasks (put them to the top)
 
 const taskItems = [
   {
@@ -47,6 +52,7 @@ class FilterList extends Component {
       alert("You can't submit an empty task.");
       return
     }
+
     e.preventDefault();
     const uuidv4 = require('uuid/v4');
     this.setState({
@@ -58,6 +64,7 @@ class FilterList extends Component {
   render() {
     return (
       <div>
+       <h1>Plan your morning!</h1>
         <SearchBar 
           value={this.state.searchTerm}
           onChange={this.handleChange} 
