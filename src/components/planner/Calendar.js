@@ -1,27 +1,11 @@
 import React, { Component } from 'react';
 import TaskTarget from  './TaskTarget';
-import { DropTarget } from 'react-dnd';
 
 // NOTE: The Calendar component is a ReactDnD target
 
-const calendarSpec = {
-  drop(props, monitor, component) {
-    const item = monitor.getItem();
-    console.log(item);
-    // When dropping the list item, we need to render it in the calendar somehow
-  }
-}
-
-function collect(connect, monitor) {
-  return {
-    connectDropTarget: connect.dropTarget(),
-  }
-}
-
 class Calendar extends Component {
   render() {
-    const { connectDropTarget } = this.props;
-    return connectDropTarget(
+    return(
     <div className="calendar">
       <TaskTarget />
       <TaskTarget />
@@ -30,4 +14,4 @@ class Calendar extends Component {
   }
 }
 
-export default DropTarget("TODO", calendarSpec, collect)(Calendar);
+export default Calendar;
