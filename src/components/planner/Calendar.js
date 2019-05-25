@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TaskTarget from  './TaskTarget';
 import { DropTarget } from 'react-dnd';
 
 // NOTE: The Calendar component is a ReactDnD target
@@ -22,6 +23,8 @@ class Calendar extends Component {
     const { connectDropTarget } = this.props;
     return connectDropTarget(
     <div className="calendar">
+      <TaskTarget />
+      <TaskTarget />
     </div>
     )
   }
