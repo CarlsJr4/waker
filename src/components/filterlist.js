@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './search';
-import TaskHolder from './tasks';
+import TaskHolder from './taskholder';
 import CreateItem from './createitem';
 
 const taskItems = [

@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import FilterList from './components/filterlist';
 import Calendar from './components/calendar';
+import HTML5Backend from 'react-dnd-html5-backend';
+import { DragDropContext } from 'react-dnd'
 import './App.css';
 
 // Today's goals:
@@ -21,4 +23,4 @@ function App() {
   )
 }
 
-export default App;
+export default DragDropContext(HTML5Backend)(App);
