@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import TodoContainer from './components/TodoList/TodoContainer';
-import Calendar from './planner/Calendar';
+import Calendar from './components/planner/Calendar';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd'
 import './App.css';
