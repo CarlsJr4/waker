@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { DropTarget } from 'react-dnd';
 
 const targetSpec = {
+    // When the item is dropped, call the onDrop function from props
     drop(props, monitor, component) {
       const item = monitor.getItem();
       console.log(item);
-      // When dropping the list item, we need to render it in the target somehow
+      props.onDrop(item);
     }
   }
   
@@ -20,7 +21,9 @@ export class TaskTarget extends Component {
         const { connectDropTarget } = this.props;
         return connectDropTarget(
             <div className="target">
-                
+                <ul>
+                    <li>Yeet</li>
+                </ul>
             </div>
         )
     }
