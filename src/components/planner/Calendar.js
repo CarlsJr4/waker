@@ -9,9 +9,10 @@ class Calendar extends Component {
   }
 
   onDrop = (item) => {
+    const uuidv4 = require('uuid/v4');
     this.setState({
       DraggedTaskList: [...this.state.DraggedTaskList, 
-        {id: item.id, body: item.body} 
+        {id: uuidv4(), body: item.body} 
       ]
     })
   }
@@ -19,7 +20,7 @@ class Calendar extends Component {
   render() {
     return(
     <div className="calendar">
-      <TaskTarget onDrop={this.onDrop} />
+      <TaskTarget onDrop={this.onDrop} taskList={this.state.DraggedTaskList} />
     </div>
     )
   }

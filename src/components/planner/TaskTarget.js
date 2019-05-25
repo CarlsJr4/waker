@@ -5,7 +5,6 @@ const targetSpec = {
     // When the item is dropped, call the onDrop function from props
     drop(props, monitor, component) {
       const item = monitor.getItem();
-      console.log(item);
       props.onDrop(item);
     }
   }
@@ -17,12 +16,17 @@ const targetSpec = {
   }
 
 export class TaskTarget extends Component {
+
     render() {
         const { connectDropTarget } = this.props;
+        const tasks = this.props.taskList.map(item => 
+            <li key={item.id}>{item.body}</li>
+            )
+
         return connectDropTarget(
             <div className="target">
                 <ul>
-                    <li>Yeet</li>
+                    {tasks}
                 </ul>
             </div>
         )
