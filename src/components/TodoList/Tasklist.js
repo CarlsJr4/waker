@@ -1,5 +1,5 @@
 import React from 'react';
-import Task from './task';
+import Task from './Task';
 
 // The component itself
 class TaskHolder extends React.Component {

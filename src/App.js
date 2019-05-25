@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import FilterList from './components/filterlist';
+import TodoContainer from './components/TodoList/TodoContainer';
 import Calendar from './components/calendar';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd'
@@ -18,7 +18,7 @@ function App() {
   return (
     <Fragment>
       <Calendar />
-      <FilterList />
+      <TodoContainer />
     </Fragment>
   )
 }

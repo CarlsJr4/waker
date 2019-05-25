@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SearchBar from './search';
-import TaskHolder from './taskholder';
-import CreateItem from './createitem';
+import SearchBar from './Searchbar';
+import TaskHolder from './Tasklist';
+import CreateItem from './Add';
 
 const taskItems = [
     {
@@ -20,7 +20,7 @@ const taskItems = [
   
   
   
-  class FilterList extends Component {
+  class TodoContainer extends Component {
     state = {
       taskList: taskItems,
       searchTerm: '',
@@ -80,5 +80,5 @@ const taskItems = [
     }
   }
   
-  export default FilterList;
+  export default TodoContainer;
   

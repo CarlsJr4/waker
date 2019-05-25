@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { DropTarget } from 'react-dnd';
 
+// NOTE: The Calendar component is a ReactDnD target
+
 const calendarSpec = {
   drop(props, monitor, component) {
     const item = monitor.getItem();
