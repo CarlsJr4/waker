@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DropTarget } from 'react-dnd';
+import CTask from './CTask';
 
 // Today's task: Make the list sortable
 // Steps:
@@ -35,7 +36,7 @@ export class TaskTarget extends Component {
     render() {
         const { connectDropTarget } = this.props;
         const tasks = this.props.taskList.map((item, i) => 
-            <li key={item.id}>{i + 1}. {item.body}</li>
+            <CTask id={item.id} index={i} body={item.body}/>
             )
 
         return connectDropTarget(
