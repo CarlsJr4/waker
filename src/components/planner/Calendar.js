@@ -18,7 +18,16 @@ class Calendar extends Component {
   }
 
   moveCard = (dragIndex, dropIndex) => {
-    console.log('yeet');
+    // Goal: Splice in the dragged item into the state 
+    // PROBLEM: Dragged items, after being removed from the state, are still being rendered
+    const sortedList = this.state.DraggedTaskList;
+    const draggedItem = sortedList[dragIndex]
+    sortedList.splice(dragIndex, 1);
+    sortedList.splice(dropIndex, 0, draggedItem);
+    this.setState({
+      DraggedTaskList: sortedList
+    })
+    console.log(sortedList);
   }
 
   render() {

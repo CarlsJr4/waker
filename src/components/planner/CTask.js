@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { DragSource, DropTarget } from 'react-dnd';
 
-
-// Upon hover...
-
-
 const dragSpec = {
     beginDrag(props, monitor, component) {
         const item = { 
@@ -29,10 +25,18 @@ const dropSpec = {
             id: props.id,
             dropIndex: props.index,
             dragIndex: monitor.getItem().index
+
+         }
+         if (!component) {
+             return
          }
 
         // We get the DOM node so can can determine if dragging up or dragging down
          const node = ReactDOM.findDOMNode(component);
+
+         if (!node) {
+             return null
+         }
 
          const dragIndex = item.dragIndex;
          const dropIndex = item.dropIndex;
@@ -62,6 +66,7 @@ const dropSpec = {
          if (dragIndex > dropIndex && mousePositionFromTop > nodeVerticalCenter) {
              return
          }
+         
          props.moveCard(dragIndex, dropIndex);
 
          monitor.getItem().index = dropIndex;
@@ -80,11 +85,14 @@ export class CTask extends Component {
         const {id, index, body, connectDragSource, connectDropTarget, isDragging} = this.props;
         const opacity = isDragging ? 0 : 1;
         return connectDropTarget(connectDragSource(
-            <li key={id} id={id} style={{opacity}}>{index + 1}. {body}</li>
+            <li 
+            key={id}
+            id={id}
+            style={{opacity}}>
+                {index + 1}. {body}
+            </li>
         ))
     }
 }
 
 export default DropTarget("CALENDARTASK", dropSpec, dropCollect)(DragSource("CALENDARTASK", dragSpec, dragCollect)(CTask))
-
-// NOTE: This component will be BOTH a drag source and a drop target.
