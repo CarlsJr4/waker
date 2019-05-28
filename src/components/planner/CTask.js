@@ -89,7 +89,7 @@ export class CTask extends Component {
             key={id}
             id={id}
             style={{opacity}}>
-                {index + 1}. {body}
+                {body}
             </li>
         ))
     }
