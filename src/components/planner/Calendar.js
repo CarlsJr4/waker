@@ -8,7 +8,20 @@ import TaskTarget from  './TaskTarget';
 
 class Calendar extends Component {
   state = {
-    DraggedTaskList: []
+    DraggedTaskList: [
+      {
+        id: 1,
+        body: 'Take out the trash'
+      },
+      {
+        id: 2,
+        body: 'Do the dishes'
+      },
+      {
+        id: 3,
+        body: 'Study'
+      }
+    ]
   }
 
   onDrop = (item) => {
