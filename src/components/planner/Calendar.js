@@ -17,10 +17,18 @@ class Calendar extends Component {
     })
   }
 
+  moveCard = (dragIndex, dropIndex) => {
+    console.log('yeet');
+  }
+
   render() {
     return(
     <div className="calendar">
-      <TaskTarget onDrop={this.onDrop} taskList={this.state.DraggedTaskList} />
+      <TaskTarget 
+      onDrop={this.onDrop}
+      taskList={this.state.DraggedTaskList} 
+      moveCard={this.moveCard}
+      />
     </div>
     )
   }

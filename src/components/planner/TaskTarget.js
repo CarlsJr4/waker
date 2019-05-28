@@ -36,7 +36,13 @@ export class TaskTarget extends Component {
     render() {
         const { connectDropTarget } = this.props;
         const tasks = this.props.taskList.map((item, i) => 
-            <CTask id={item.id} key={item.id} index={i} body={item.body}/>
+            <CTask 
+            id={item.id} 
+            key={item.id} 
+            index={i} 
+            body={item.body}
+            moveCard={this.props.moveCard}
+            />
             )
 
         return connectDropTarget(
