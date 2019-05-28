@@ -11,15 +11,17 @@ const CTaskSpec = {
 
 function collect(connect, monitor) {
     return {
-        connectDragSource: connect.dragSource()
+        connectDragSource: connect.dragSource(),
+        isDragging: monitor.isDragging()
     }
 }
 
 export class CTask extends Component {
     render() {
-        const {id, index, body, connectDragSource} = this.props
+        const {id, index, body, connectDragSource, isDragging} = this.props;
+        const opacity = isDragging ? 0 : 1;
         return connectDragSource(
-            <li key={id}>{index + 1}. {body}</li>
+            <li key={id} style={{opacity}}>{index + 1}. {body}</li>
         )
     }
 }

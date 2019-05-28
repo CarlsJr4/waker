@@ -6,7 +6,7 @@ import { DragDropContext } from 'react-dnd'
 import './App.css';
 
 // Today's goals:
-// Drag the items into another list 
+// Make list item opacity 0 when dragging
 
 // Future goals:
 // 1. Edit list items
