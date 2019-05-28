@@ -6,13 +6,14 @@ import { DragDropContext } from 'react-dnd'
 import './App.css';
 
 // Today's goals:
-// Make list item opacity 0 when dragging
+// Sortable list items
 
 // Future goals:
 // 1. Edit list items
 // 2. Change color of list items
 // 3. Add cursor: pointer to all list items 
 // 4. Favorite tasks (put them to the top)
+// Custom drag layer
 
 function App() {
   return (
