@@ -3,20 +3,14 @@ import { DragSource, DropTarget } from 'react-dnd';
 
 
 // Upon hover...
-// 1. Console log dragged item index AND hovered item index
-// 2. If the indexes match, do nothing
-// 3. Console log 
+
 
 const dragSpec = {
     beginDrag(props, monitor, component) {
-        const item = { id: props.id }
-        return item
-    }
-}
-
-const dropSpec = {
-    hover(props, monitor, component) {
-        const item = { id: props.id }
+        const item = { 
+            id: props.id,
+            index: props.index
+         }
         return item
     }
 }
@@ -24,7 +18,24 @@ const dropSpec = {
 function dragCollect(connect, monitor) {
     return {
         connectDragSource: connect.dragSource(),
-        isDragging: monitor.isDragging()
+        isDragging: monitor.isDragging(),
+    }
+}
+
+const dropSpec = {
+    drop(props, monitor, component) {
+        // Set to drop for now for debugging (set to hover when needed)
+        // All sorting logic should be implemented in the hover handler
+        const item = { 
+            id: props.id,
+            dropIndex: props.index,
+            dragIndex: monitor.getItem().index
+         }
+         if (item.dropIndex === item.dragIndex) {
+             return
+         }
+        console.log(item.dropIndex, item.dragIndex)
+        return item
     }
 }
 
