@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import TaskTarget from  './TaskTarget';
 
 // NOTE: The Calendar component is a ReactDnD target
+// NEXT TASK: Organize the calendar into a grid with times
+// THEN: Include buttons to increase and decrease the sizes of the tasks
+// THEN: Include a way to delete task items
 
 class Calendar extends Component {
   state = {

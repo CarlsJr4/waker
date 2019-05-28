@@ -1,0 +1,12 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid red;
+  }
+  
+  .target {
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+  }

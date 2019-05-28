@@ -3,7 +3,10 @@ import TodoContainer from './components/TodoList/TodoContainer';
 import Calendar from './components/planner/Calendar';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd'
-import './App.css';
+
+import './stylesheets/App.css';
+import './stylesheets/calendar.css';
+import './stylesheets/todo.css';
 
 // Today's goals:
 // Sortable list items

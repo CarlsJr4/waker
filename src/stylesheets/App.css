@@ -1,0 +1,42 @@
+:root {
+  --peach: rgb(255, 144, 125);
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+  position: relative;
+  color: white;
+  background: var(--peach);
+  padding: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+
+
+
