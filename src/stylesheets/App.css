@@ -24,9 +24,9 @@ ul {
 
 li {
   position: relative;
-  color: white;
-  background: var(--peach);
+  background: white;
   border: 3px solid var(--peach);
+  color: var(--peach);
   border-radius: 5px;
   cursor: pointer;
   transition-duration: 200ms;
@@ -34,8 +34,8 @@ li {
 }
 
 li:hover {
-  color: var(--peach);
-  background: white;
+  color: white;
+  background: var(--peach);
   border: 3px solid var(--peach);
 }
 
