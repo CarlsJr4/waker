@@ -36,6 +36,9 @@
     display: grid;
     align-items: center;
     justify-content: center;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 15px;
+    padding: 0 1rem;
     max-width: 40%;
     height: 100%;
   }
@@ -43,3 +46,4 @@
   .calendar__dropZone {
     height: 100%;
   }
+

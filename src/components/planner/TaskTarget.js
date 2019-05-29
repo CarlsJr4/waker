@@ -18,15 +18,24 @@ const targetSpec = {
 export class TaskTarget extends Component {
 
     render() {
-        const { connectDropTarget } = this.props;
-        const tasks = this.props.taskList.map((item, i) => 
+        const { 
+          connectDropTarget,
+           moveCard,
+           taskList,
+           incrementHeight,
+           decrementHeight
+          } = this.props;
+          
+        const tasks = taskList.map((item, i) => 
             <CTask 
             id={item.id} 
             key={item.id} 
             index={i} 
             body={item.body}
             length={item.length}
-            moveCard={this.props.moveCard}
+            moveCard={moveCard}
+            incrementHeight={incrementHeight}
+            decrementHeight={decrementHeight}
             />
             )
 

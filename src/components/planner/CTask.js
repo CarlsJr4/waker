@@ -82,15 +82,29 @@ function dropCollect(connect, monitor) {
 
 export class CTask extends Component {
     render() {
-        const {id, body, length, connectDragSource, connectDropTarget, isDragging} = this.props;
+        const {
+            id, 
+            body, 
+            length,
+            index, 
+            incrementHeight, 
+            decrementHeight, 
+            connectDragSource, 
+            connectDropTarget, 
+            isDragging
+        } = this.props;
+
         const opacity = isDragging ? 0 : 1;
         return connectDropTarget(connectDragSource(
             <li 
             key={id}
             id={id}
+            data-index={index}
             style={{opacity, gridRow:`span ${length}`}}
             >
             {body}
+            <i className="fas fa-plus" onClick={incrementHeight}></i>
+            <i className="fas fa-minus" onClick={decrementHeight}></i>
             </li>
         ))
     }

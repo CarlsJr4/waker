@@ -20,6 +20,26 @@ class Calendar extends Component {
     })
   }
 
+  handleIncrement = (e) => {
+    const updatedList = [...this.state.DraggedTaskList]
+    const index = e.target.parentNode.dataset.index;
+    let item = updatedList[index]
+    item.length++;
+    this.setState({DraggedTaskList: updatedList})
+  }
+
+  handleDecrement = (e) => {
+    const updatedList = [...this.state.DraggedTaskList]
+    const index = e.target.parentNode.dataset.index;
+    let item = updatedList[index]
+    if (item.length === 1) {
+      alert('Task cannot be less than 30 minutes');
+      return;
+    }
+    item.length--;
+    this.setState({DraggedTaskList: updatedList})
+  }
+
   moveCard = (dragIndex, dropIndex) => {
     const sortedList = [...this.state.DraggedTaskList];
     const draggedItem = sortedList[dragIndex]
@@ -53,6 +73,8 @@ class Calendar extends Component {
       onDrop={this.onDrop}
       taskList={this.state.DraggedTaskList} 
       moveCard={this.moveCard}
+      incrementHeight={this.handleIncrement}
+      decrementHeight={this.handleDecrement}
       />
     </div>
     )
