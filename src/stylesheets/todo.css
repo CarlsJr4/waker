@@ -13,6 +13,7 @@ input {
 
   .todo__list > li {
     margin-bottom: 1rem;
+    max-width: 33vw;
   }
 
   .fa-trash {

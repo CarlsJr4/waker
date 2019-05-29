@@ -25,6 +25,10 @@
     align-items: center;
   }
 
+  .calendar__list > li {
+    max-width: 40%;
+  }
+
   .calendar__dropZone {
     height: 100%;
   }
