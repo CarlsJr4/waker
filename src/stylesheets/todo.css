@@ -11,6 +11,10 @@ input {
     grid-template-columns: 1fr auto;
   }
 
+  .todo__list > li {
+    margin-bottom: 1rem;
+  }
+
   .fa-trash {
     position: absolute;
     right: 25px;

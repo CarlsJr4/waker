@@ -30,8 +30,8 @@ export class TaskTarget extends Component {
             )
 
         return connectDropTarget(
-            <div className="target">
-                <ul>
+            <div className="calendar__dropZone">
+                <ul className="calendar__list">
                     {tasks}
                 </ul>
             </div>

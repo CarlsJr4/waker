@@ -46,6 +46,22 @@ class Calendar extends Component {
   render() {
     return(
     <div className="calendar">
+     <section className="calendar__times">
+       <div>6:00</div>
+       <div>6:30</div>
+       <div>7:00</div>
+       <div>7:30</div>
+       <div>8:00</div>
+       <div>8:30</div>
+       <div>9:00</div>
+       <div>9:30</div>
+       <div>10:00</div>
+       <div>10:30</div>
+       <div>11:00</div>
+       <div>11:30</div>
+       <div>12:00</div>
+     </section>
+     
       <TaskTarget 
       onDrop={this.onDrop}
       taskList={this.state.DraggedTaskList} 

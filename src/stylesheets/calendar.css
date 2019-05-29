@@ -1,12 +1,30 @@
 .calendar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border: 1px solid red;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100vh;
+    /* border: 1px solid red; */
+  }
+
+  /* Goal: Have left hand side cover hours from 6:00am - 12:00pm in 30 minute blocks */
+  /* Plan: Left side of grid is a bunch of divs with hours and lines */
+  /* Right side of grid is the list items  */
+
+  .calendar__times {
+    display: grid;
+    grid-template-rows: repeat(13, 1fr);
+    height: 100%;
+    align-items: center;
   }
   
-  .target {
-    width: 50%;
+  .calendar__list {
+    width: auto;
+    display: grid;
+    grid-template-rows: repeat(13, 1fr);
     height: 100%;
-    border: 1px solid red;
+    margin: 0;
+    align-items: center;
+  }
+
+  .calendar__dropZone {
+    height: 100%;
   }

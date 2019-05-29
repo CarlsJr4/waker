@@ -22,7 +22,7 @@ class TaskHolder extends React.Component {
 
     // We return a mapped list of filtered results 
     return (
-      <ul>
+      <ul className="todo__list">
         {tasks}
       </ul>
     )
