@@ -15,18 +15,29 @@
     height: 100%;
     align-items: center;
   }
-  
+
+  .calendar__times > div {
+    padding: 1.5rem;
+    /* border: 1px solid var(--peach); */
+  }
+ 
   .calendar__list {
     width: auto;
     display: grid;
     grid-template-rows: repeat(13, 1fr);
     height: 100%;
     margin: 0;
+    margin-top: 3rem;
     align-items: center;
+    grid-gap: 7px;
   }
 
   .calendar__list > li {
+    display: grid;
+    align-items: center;
+    justify-content: center;
     max-width: 40%;
+    height: 100%;
   }
 
   .calendar__dropZone {

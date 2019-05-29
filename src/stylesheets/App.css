@@ -27,7 +27,6 @@ li {
   color: white;
   background: var(--peach);
   border: 3px solid var(--peach);
-  padding: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
   transition-duration: 200ms;
