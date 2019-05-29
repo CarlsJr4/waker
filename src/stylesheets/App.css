@@ -26,14 +26,18 @@ li {
   position: relative;
   color: white;
   background: var(--peach);
+  border: 3px solid var(--peach);
   padding: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.15s;
+  transition-duration: 200ms;
+  transition-property: background-color, color, border; 
 }
 
 li:hover {
-  transform: scale(1.1);
+  color: var(--peach);
+  background: white;
+  border: 3px solid var(--peach);
 }
 
 
