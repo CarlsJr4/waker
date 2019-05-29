@@ -25,6 +25,7 @@ export class TaskTarget extends Component {
             key={item.id} 
             index={i} 
             body={item.body}
+            length={item.length}
             moveCard={this.props.moveCard}
             />
             )

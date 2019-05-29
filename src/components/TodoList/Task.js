@@ -23,7 +23,10 @@ export class Task extends Component {
     // React DnD spec object
     const taskSpec = {
         beginDrag(props, monitor, component) {
-          const item = { id: props.id, body: props.body }
+          const item = { 
+            id: props.id,
+            body: props.body,
+            length: props.length }
           return item
         }
       }

@@ -6,18 +6,10 @@ import CreateItem from './Add';
 const taskItems = [
     {
       id: 1,
-      body: 'Take out the trash'
-    },
-    {
-      id: 2,
-      body: 'Do the dishes'
-    },
-    {
-      id: 3,
-      body: 'Study'
+      length: 1,
+      body: 'Free time'
     }
   ]
-  
   
   
   class TodoContainer extends Component {
@@ -52,7 +44,7 @@ const taskItems = [
       e.preventDefault();
       const uuidv4 = require('uuid/v4');
       this.setState({
-        taskList: [{id: uuidv4(), body: this.state.newTaskName}, ...this.state.taskList],
+        taskList: [{id: uuidv4(), body: this.state.newTaskName, length: 1}, ...this.state.taskList],
         newTaskName: ''
       });
     }

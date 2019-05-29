@@ -8,27 +8,14 @@ import TaskTarget from  './TaskTarget';
 
 class Calendar extends Component {
   state = {
-    DraggedTaskList: [
-      {
-        id: 1,
-        body: 'Take out the trash'
-      },
-      {
-        id: 2,
-        body: 'Do the dishes'
-      },
-      {
-        id: 3,
-        body: 'Study'
-      }
-    ]
+    DraggedTaskList: []
   }
 
   onDrop = (item) => {
     const uuidv4 = require('uuid/v4');
     this.setState({
       DraggedTaskList: [...this.state.DraggedTaskList, 
-        {id: uuidv4(), body: item.body} 
+        {id: uuidv4(), body: item.body, length: item.length} 
       ]
     })
   }
