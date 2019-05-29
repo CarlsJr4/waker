@@ -17,9 +17,8 @@
     align-items: center;
   }
 
-  .calendar__times > div {
-    padding: 1.5rem;
-    /* border: 1px solid var(--peach); */
+  .calendar__times > h1 {
+    padding-right: 2rem;
   }
  
   .calendar__list {

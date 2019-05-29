@@ -52,7 +52,7 @@ const taskItems = [
     render() {
       return (
         <div>
-         <h1>Plan your morning!</h1>
+         <h1>Your Saved Tasks:</h1>
           <SearchBar 
             value={this.state.searchTerm}
             onChange={this.handleChange} 
