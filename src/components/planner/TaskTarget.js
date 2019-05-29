@@ -25,14 +25,14 @@ export class TaskTarget extends Component {
            incrementHeight,
            decrementHeight
           } = this.props;
-          
+
         const tasks = taskList.map((item, i) => 
             <CTask 
             id={item.id} 
             key={item.id} 
             index={i} 
             body={item.body}
-            length={item.length}
+            timeLength={item.timeLength}
             moveCard={moveCard}
             incrementHeight={incrementHeight}
             decrementHeight={decrementHeight}

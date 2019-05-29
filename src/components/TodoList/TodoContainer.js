@@ -6,7 +6,7 @@ import CreateItem from './Add';
 const taskItems = [
     {
       id: 1,
-      length: 1,
+      timeLength: 1,
       body: 'Free time'
     }
   ]
@@ -44,7 +44,7 @@ const taskItems = [
       e.preventDefault();
       const uuidv4 = require('uuid/v4');
       this.setState({
-        taskList: [{id: uuidv4(), body: this.state.newTaskName, length: 1}, ...this.state.taskList],
+        taskList: [{id: uuidv4(), body: this.state.newTaskName, timeLength: 1}, ...this.state.taskList],
         newTaskName: ''
       });
     }

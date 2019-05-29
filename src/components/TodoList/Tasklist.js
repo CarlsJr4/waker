@@ -14,7 +14,7 @@ class TaskHolder extends React.Component {
     // We map a component for each task in the parent state so we can make each item draggable
     // We pass in body as a prop so it can be accessed by the draggable list items
     const tasks = filteredList.map(task =>
-      <Task key={task.id} body={task.body} length={task.length}>
+      <Task key={task.id} body={task.body} timeLength={task.timeLength}>
         {task.body}
         <i className="fas fa-trash" data-key={task.id} onClick={this.props.onClick}></i>
       </Task>

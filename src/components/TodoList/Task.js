@@ -26,7 +26,7 @@ export class Task extends Component {
           const item = { 
             id: props.id,
             body: props.body,
-            length: props.length }
+            timeLength: props.timeLength }
           return item
         }
       }

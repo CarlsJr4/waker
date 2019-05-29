@@ -85,7 +85,7 @@ export class CTask extends Component {
         const {
             id, 
             body, 
-            length,
+            timeLength,
             index, 
             incrementHeight, 
             decrementHeight, 
@@ -100,7 +100,7 @@ export class CTask extends Component {
             key={id}
             id={id}
             data-index={index}
-            style={{opacity, gridRow:`span ${length}`}}
+            style={{opacity, gridRow:`span ${timeLength}`}}
             >
             {body}
             <i className="fas fa-plus" onClick={incrementHeight}></i>

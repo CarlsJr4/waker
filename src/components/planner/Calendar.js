@@ -15,7 +15,7 @@ class Calendar extends Component {
     const uuidv4 = require('uuid/v4');
     this.setState({
       DraggedTaskList: [...this.state.DraggedTaskList, 
-        {id: uuidv4(), body: item.body, length: item.length} 
+        {id: uuidv4(), body: item.body, timeLength: item.timeLength} 
       ]
     })
   }
@@ -24,7 +24,7 @@ class Calendar extends Component {
     const updatedList = [...this.state.DraggedTaskList]
     const index = e.target.parentNode.dataset.index;
     let item = updatedList[index]
-    item.length++;
+    item.timeLength++;
     this.setState({DraggedTaskList: updatedList})
   }
 
@@ -32,11 +32,11 @@ class Calendar extends Component {
     const updatedList = [...this.state.DraggedTaskList]
     const index = e.target.parentNode.dataset.index;
     let item = updatedList[index]
-    if (item.length === 1) {
+    if (item.timeLength === 1) {
       alert('Task cannot be less than 30 minutes');
       return;
     }
-    item.length--;
+    item.timeLength--;
     this.setState({DraggedTaskList: updatedList})
   }
 
