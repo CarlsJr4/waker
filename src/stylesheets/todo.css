@@ -15,6 +15,7 @@ input {
     margin-bottom: 1rem;
     max-width: 33vw;
     padding: 1.5rem;
+    font-weight: bold;
   }
 
   .fa-trash {
@@ -23,6 +24,7 @@ input {
   }
 
   .fa-trash--todo {
+    color: white;
     position: absolute;
     right: 25px;
   }

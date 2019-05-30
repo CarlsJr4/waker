@@ -40,6 +40,11 @@
 
   .calendar__list > li > p {
     padding-top: 1rem;
+    font-weight: bold;
+  }
+
+  .calendar__list > li > .fas {
+    color: white;
   }
 
   .calendar__list > li > .fa-plus-circle, .fa-minus-circle {
