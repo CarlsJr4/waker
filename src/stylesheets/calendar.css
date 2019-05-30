@@ -73,6 +73,7 @@
   .buttonList {
     display: grid;
     align-content: start;
-    grid-gap: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
   }
 

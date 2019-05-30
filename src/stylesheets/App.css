@@ -40,6 +40,21 @@ li:hover {
   border: 3px solid var(--peach);
 }
 
+button {
+  background: var(--peach);
+  border: none;
+  padding: 1rem;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: white;
+  color: var(--peach);
+  border: 3px solid var(--peach);
+}
+
 
 
 
