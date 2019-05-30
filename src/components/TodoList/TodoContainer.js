@@ -51,7 +51,7 @@ const taskItems = [
   
     render() {
       return (
-        <div>
+        <div className="todoList">
          <h1>Your Saved Tasks:</h1>
           <SearchBar 
             value={this.state.searchTerm}

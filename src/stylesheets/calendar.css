@@ -3,6 +3,7 @@
     grid-template-columns: auto 1fr auto;
     height: 100vh;
     overflow: hidden;
+    padding: 2rem;
   }
 
   .calendar__times {
