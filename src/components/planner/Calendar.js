@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TaskTarget from  './TaskTarget';
 
-// THEN: Include a way to delete task items
 // Draw dotted lines somehow
 // Save the state to local history somehow?
 // Make the app look real pretty!

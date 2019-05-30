@@ -1,5 +1,7 @@
 :root {
   --main-list-color: rgb(255, 144, 125);
+  --canDrop: rgb(241, 255, 51);
+  --isOver: rgb(0, 255, 64);
 }
 
 #root {

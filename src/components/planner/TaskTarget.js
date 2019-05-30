@@ -12,6 +12,8 @@ const targetSpec = {
   function collect(connect, monitor) {
     return {
       connectDropTarget: connect.dropTarget(),
+      canDrop: monitor.canDrop(),
+      isOver: monitor.isOver()
     }
   }
 
@@ -22,11 +24,22 @@ export class TaskTarget extends Component {
           connectDropTarget,
            moveCard,
            taskList,
+           canDrop,
+           isOver,
            deleteTask,
            incrementHeight,
            decrementHeight
           } = this.props;
 
+        let dropClass = '';
+        if (canDrop && !isOver) {
+          dropClass = 'calendar__dropZone--canDrop'
+        } else if ( canDrop && isOver) {
+          dropClass = 'calendar__dropZone--isOver'
+        } else {
+          dropClass = ''
+        }
+        
         const tasks = taskList.map((item, i) => 
             <CTask 
             id={item.id} 
@@ -42,7 +55,7 @@ export class TaskTarget extends Component {
             )
 
         return connectDropTarget(
-            <div className="calendar__dropZone">
+            <div className={`calendar__dropZone ${dropClass}`}>
                 <ul className="calendar__list">
                     {tasks}
                 </ul>

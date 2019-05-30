@@ -67,6 +67,17 @@
 
   .calendar__dropZone {
     height: 100%;
+    padding: 0 1rem;
+  }
+
+  .calendar__dropZone--canDrop {
+    border: 3px dashed var(--canDrop);
+    border-radius: 5px;
+  }
+
+  .calendar__dropZone--isOver {
+    border: 3px dashed var(--isOver);
+    border-radius: 5px;
   }
 
   .buttonList {

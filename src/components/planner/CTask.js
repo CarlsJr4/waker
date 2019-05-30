@@ -76,7 +76,7 @@ const dropSpec = {
 
 function dropCollect(connect, monitor) {
     return {
-        connectDropTarget: connect.dropTarget()
+        connectDropTarget: connect.dropTarget(),
     }
 }
 
