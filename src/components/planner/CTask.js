@@ -102,9 +102,9 @@ export class CTask extends Component {
             data-index={index}
             style={{opacity, gridRow:`span ${timeLength}`}}
             >
-            {body}
-            <i className="fas fa-plus" onClick={incrementHeight}></i>
-            <i className="fas fa-minus" onClick={decrementHeight}></i>
+                <p>{body}</p>
+                <i className="fas fa-plus-circle" onClick={incrementHeight}></i>
+                <i className="fas fa-minus-circle" onClick={decrementHeight}></i>
             </li>
         ))
     }

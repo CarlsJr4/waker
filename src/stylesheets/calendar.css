@@ -3,12 +3,7 @@
     grid-template-columns: auto 1fr;
     height: 100vh;
     overflow: hidden;
-    /* border: 1px solid red; */
   }
-
-  /* Goal: Have left hand side cover hours from 6:00am - 12:00pm in 30 minute blocks */
-  /* Plan: Left side of grid is a bunch of divs with hours and lines */
-  /* Right side of grid is the list items  */
 
   .calendar__times {
     display: grid;
@@ -34,13 +29,27 @@
 
   .calendar__list > li {
     display: grid;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     grid-template-columns: 1fr auto auto;
     grid-gap: 15px;
     padding: 0 1rem;
     max-width: 40%;
     height: 100%;
+  }
+
+  .calendar__list > li > p {
+    padding-top: 1rem;
+  }
+
+  .calendar__list > li > .fa-plus-circle, .fa-minus-circle {
+    padding-top: 2.2rem;
+    font-size: 1.3rem;
+  }
+
+  .calendar__list > li > .fa-plus-circle:hover, .fa-minus-circle:hover {
+    padding-top: 2rem;
+    transform: scale(1.2);
   }
 
   .calendar__dropZone {
