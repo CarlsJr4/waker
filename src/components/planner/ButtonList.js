@@ -7,9 +7,6 @@ export default function ButtonList(props) {
                 <p>Reset All</p>
                 <i class="fas fa-redo-alt"></i>
             </button>
-            <button>
-                <i class="fas fa-trash-alt"></i>
-            </button>
         </div>
     )
 }
