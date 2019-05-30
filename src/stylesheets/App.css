@@ -1,6 +1,7 @@
 :root {
-  --main-list-color: white;
-  --hover-list-color: rgb(255, 144, 125);
+  --main-list-color: #243665;
+  --hover-list-color: #8BD8BD;
+  --list-font-color: white;
   --canDrop: rgb(241, 255, 51);
   --isOver: rgb(0, 255, 64);
 }
@@ -29,8 +30,8 @@ ul {
 li {
   position: relative;
   background: var(--main-list-color);
-  border: 3px solid var(--hover-list-color);
-  color: var(--hover-list-color);
+  border: 3px solid var(--main-list-color);
+  color: var(--list-font-color);
   border-radius: 5px;
   cursor: pointer;
   transition-duration: 200ms;
@@ -38,7 +39,6 @@ li {
 }
 
 li:hover {
-  color: var(--main-list-color);
   background: var(--hover-list-color);
   border: 3px solid var(--hover-list-color);
 }
