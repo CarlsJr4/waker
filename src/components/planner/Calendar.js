@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TaskTarget from  './TaskTarget';
+import ButtonList from './ButtonList';
 
 // THEN: Include a way to delete task items
 // Draw dotted lines somehow
@@ -40,6 +41,12 @@ class Calendar extends Component {
     this.setState({DraggedTaskList: updatedList})
   }
 
+  handleReset = () => {
+    this.setState({
+      DraggedTaskList: []
+    })
+  }
+
   moveCard = (dragIndex, dropIndex) => {
     const sortedList = [...this.state.DraggedTaskList];
     const draggedItem = sortedList[dragIndex]
@@ -76,6 +83,8 @@ class Calendar extends Component {
       incrementHeight={this.handleIncrement}
       decrementHeight={this.handleDecrement}
       />
+
+      <ButtonList onClick={this.handleReset} />
     </div>
     )
   }

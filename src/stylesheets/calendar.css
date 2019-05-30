@@ -1,6 +1,6 @@
 .calendar {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     height: 100vh;
     overflow: hidden;
   }
@@ -34,7 +34,7 @@
     grid-template-columns: 1fr auto auto;
     grid-gap: 15px;
     padding: 0 1rem;
-    max-width: 40%;
+    /* max-width: 40%; */
     height: 100%;
   }
 
@@ -54,5 +54,11 @@
 
   .calendar__dropZone {
     height: 100%;
+  }
+
+  .buttonList {
+    display: grid;
+    align-content: start;
+    grid-gap: 20px;
   }
 
