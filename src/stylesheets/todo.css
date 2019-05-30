@@ -18,10 +18,13 @@ input {
   }
 
   .fa-trash {
-    position: absolute;
-    right: 25px;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  .fa-trash--todo {
+    position: absolute;
+    right: 25px;
   }
   
   .fa-trash:hover {

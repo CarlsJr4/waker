@@ -16,7 +16,7 @@ class TaskHolder extends React.Component {
     const tasks = filteredList.map(task =>
       <Task key={task.id} body={task.body} timeLength={task.timeLength}>
         {task.body}
-        <i className="fas fa-trash" data-key={task.id} onClick={this.props.onClick}></i>
+        <i className="fas fa-trash fa-trash--todo" data-key={task.id} onClick={this.props.onClick}></i>
       </Task>
     );
 

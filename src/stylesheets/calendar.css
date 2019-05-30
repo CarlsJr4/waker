@@ -31,7 +31,7 @@
     display: grid;
     align-items: start;
     justify-content: center;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto auto auto;
     grid-gap: 15px;
     padding: 0 1rem;
     /* max-width: 40%; */
@@ -45,6 +45,10 @@
   .calendar__list > li > .fa-plus-circle, .fa-minus-circle {
     padding-top: 2.2rem;
     font-size: 1.3rem;
+  }
+
+  .calendar__list > li > .fa-trash--calendar{
+    padding-top: 2.1rem;
   }
 
   .calendar__list > li > .fa-plus-circle:hover, .fa-minus-circle:hover {
