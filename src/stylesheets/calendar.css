@@ -56,6 +56,10 @@
     transform: scale(1.2);
   }
 
+  .calendar__list > li > .fa-trash--calendar:hover {
+    padding-top: 2rem;
+  }
+
   .calendar__dropZone {
     height: 100%;
   }

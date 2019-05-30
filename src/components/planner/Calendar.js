@@ -46,6 +46,15 @@ class Calendar extends Component {
     })
   }
 
+  deleteTask = (e) => {
+    const updatedList = [...this.state.DraggedTaskList]
+    const index = e.target.parentNode.dataset.index;
+    updatedList.splice(index, 1);
+    this.setState({
+      DraggedTaskList: updatedList
+    })
+  }
+
   moveCard = (dragIndex, dropIndex) => {
     const sortedList = [...this.state.DraggedTaskList];
     const draggedItem = sortedList[dragIndex]
@@ -81,12 +90,13 @@ class Calendar extends Component {
       moveCard={this.moveCard}
       incrementHeight={this.handleIncrement}
       decrementHeight={this.handleDecrement}
+      deleteTask={this.deleteTask}
       />
 
       <div className="buttonList">
           <button onClick={this.onClick}>
               <p>Reset All</p>
-              <i class="fas fa-redo-alt"></i>
+              <i className="fas fa-redo-alt"></i>
           </button>
       </div>
     </div>

@@ -22,6 +22,7 @@ export class TaskTarget extends Component {
           connectDropTarget,
            moveCard,
            taskList,
+           deleteTask,
            incrementHeight,
            decrementHeight
           } = this.props;
@@ -34,6 +35,7 @@ export class TaskTarget extends Component {
             body={item.body}
             timeLength={item.timeLength}
             moveCard={moveCard}
+            deleteTask={deleteTask}
             incrementHeight={incrementHeight}
             decrementHeight={decrementHeight}
             />
