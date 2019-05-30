@@ -94,7 +94,7 @@ class Calendar extends Component {
       />
 
       <div className="buttonList">
-          <button onClick={this.onClick}>
+          <button onClick={this.deleteTask}>
               <p>Reset All</p>
               <i className="fas fa-redo-alt"></i>
           </button>
