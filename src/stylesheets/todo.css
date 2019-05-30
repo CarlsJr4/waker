@@ -28,7 +28,7 @@ input {
   }
 
   .fa-trash--todo {
-    color: white;
+    color: var(--main-list-color);
     position: absolute;
     right: 25px;
   }

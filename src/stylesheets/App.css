@@ -1,5 +1,6 @@
 :root {
-  --main-list-color: rgb(255, 144, 125);
+  --main-list-color: white;
+  --hover-list-color: rgb(255, 144, 125);
   --canDrop: rgb(241, 255, 51);
   --isOver: rgb(0, 255, 64);
 }
@@ -27,9 +28,9 @@ ul {
 
 li {
   position: relative;
-  background: white;
-  border: 3px solid var(--main-list-color);
-  color: var(--main-list-color);
+  background: var(--main-list-color);
+  border: 3px solid var(--hover-list-color);
+  color: var(--hover-list-color);
   border-radius: 5px;
   cursor: pointer;
   transition-duration: 200ms;
@@ -37,24 +38,24 @@ li {
 }
 
 li:hover {
-  color: white;
-  background: var(--main-list-color);
-  border: 3px solid var(--main-list-color);
+  color: var(--main-list-color);
+  background: var(--hover-list-color);
+  border: 3px solid var(--hover-list-color);
 }
 
 button {
-  background: var(--main-list-color);
+  background: var(--hover-list-color);
   border: none;
   padding: 1rem;
-  color: white;
-  border: 3px solid white;
+  color: var(--main-list-color);
+  border: 3px solid var(--main-list-color);
   border-radius: 5px;
 }
 
 button:hover {
-  background: white;
-  color: var(--main-list-color);
-  border: 3px solid var(--main-list-color);
+  background: var(--main-list-color);
+  color: var(--hover-list-color);
+  border: 3px solid var(--hover-list-color);
 }
 
 

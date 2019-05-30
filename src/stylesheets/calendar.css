@@ -44,7 +44,7 @@
   }
 
   .calendar__list > li > .fas {
-    color: white;
+    color: var(--main-list-color);
   }
 
   .calendar__list > li > .fa-plus-circle, .fa-minus-circle {
