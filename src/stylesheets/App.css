@@ -35,7 +35,7 @@ li {
   border-radius: 5px;
   cursor: pointer;
   transition-duration: 200ms;
-  transition-property: background-color, color, border; 
+  transition-property: background-color, color; 
 }
 
 li:hover {

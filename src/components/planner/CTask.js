@@ -77,6 +77,7 @@ const dropSpec = {
 function dropCollect(connect, monitor) {
     return {
         connectDropTarget: connect.dropTarget(),
+        canDrop: monitor.canDrop()
     }
 }
 
@@ -86,6 +87,7 @@ export class CTask extends Component {
             id, 
             body, 
             timeLength,
+            canDrop,
             index, 
             incrementHeight, 
             decrementHeight, 
@@ -96,12 +98,13 @@ export class CTask extends Component {
         } = this.props;
 
         const opacity = isDragging ? 0 : 1;
+        const border = canDrop ? '3px dashed var(--list-font-color)' : 'none';
         return connectDropTarget(connectDragSource(
             <li 
             key={id}
             id={id}
             data-index={index}
-            style={{opacity, gridRow:`span ${timeLength}`}}
+            style={{opacity, gridRow:`span ${timeLength}`, border}}
             >
                 <p>{body}</p>
                 <i className="fas fa-plus-circle" onClick={incrementHeight}></i>
