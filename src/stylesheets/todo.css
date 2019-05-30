@@ -24,7 +24,6 @@ input {
     cursor: pointer;
   }
   
-  .fas:hover {
-    transition: transform 50ms;
+  .fa-trash:hover {
     transform: scale(1.2);
   }
