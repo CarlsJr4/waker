@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TaskTarget from  './TaskTarget';
-import ButtonList from './ButtonList';
 
 // THEN: Include a way to delete task items
 // Draw dotted lines somehow
@@ -84,7 +83,12 @@ class Calendar extends Component {
       decrementHeight={this.handleDecrement}
       />
 
-      <ButtonList onClick={this.handleReset} />
+      <div className="buttonList">
+          <button onClick={this.onClick}>
+              <p>Reset All</p>
+              <i class="fas fa-redo-alt"></i>
+          </button>
+      </div>
     </div>
     )
   }
