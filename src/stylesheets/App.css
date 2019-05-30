@@ -1,5 +1,5 @@
 :root {
-  --peach: rgb(255, 144, 125);
+  --main-list-color: rgb(255, 144, 125);
 }
 
 #root {
@@ -26,8 +26,8 @@ ul {
 li {
   position: relative;
   background: white;
-  border: 3px solid var(--peach);
-  color: var(--peach);
+  border: 3px solid var(--main-list-color);
+  color: var(--main-list-color);
   border-radius: 5px;
   cursor: pointer;
   transition-duration: 200ms;
@@ -36,12 +36,12 @@ li {
 
 li:hover {
   color: white;
-  background: var(--peach);
-  border: 3px solid var(--peach);
+  background: var(--main-list-color);
+  border: 3px solid var(--main-list-color);
 }
 
 button {
-  background: var(--peach);
+  background: var(--main-list-color);
   border: none;
   padding: 1rem;
   color: white;
@@ -51,8 +51,8 @@ button {
 
 button:hover {
   background: white;
-  color: var(--peach);
-  border: 3px solid var(--peach);
+  color: var(--main-list-color);
+  border: 3px solid var(--main-list-color);
 }
 
 
