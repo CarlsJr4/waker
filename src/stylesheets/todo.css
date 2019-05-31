@@ -5,6 +5,13 @@ input {
     margin-bottom: 0.5rem;
   }
 
+  .todoControls {
+    margin-top: 1rem;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .todoList {
     padding: 0 2rem;
     border-right: 1px dashed rgb(0, 0, 0, 0.25);

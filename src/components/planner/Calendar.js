@@ -39,12 +39,6 @@ class Calendar extends Component {
     this.setState({DraggedTaskList: updatedList})
   }
 
-  handleReset = () => {
-    this.setState({
-      DraggedTaskList: []
-    })
-  }
-
   deleteTask = (e) => {
     const updatedList = [...this.state.DraggedTaskList]
     const index = e.target.parentNode.dataset.index;
@@ -91,13 +85,6 @@ class Calendar extends Component {
       decrementHeight={this.handleDecrement}
       deleteTask={this.deleteTask}
       />
-
-      <div className="buttonList">
-          <button onClick={this.handleReset}>
-              <p>Reset All</p>
-              <i className="fas fa-redo-alt"></i>
-          </button>
-      </div>
     </div>
     )
   }

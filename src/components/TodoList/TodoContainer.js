@@ -62,6 +62,10 @@ const taskItems = [
             onChange={this.handleMake}
             value={this.state.newTaskName}
             />
+            <div className="todoControls">
+              <button>Clear Tasks</button>
+              <button>Clear Schedule</button>
+            </div>
           <TaskHolder 
             taskList={this.state.taskList} 
             searchTerm={this.state.searchTerm}
