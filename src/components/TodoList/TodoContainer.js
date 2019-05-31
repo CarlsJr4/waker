@@ -33,6 +33,12 @@ const taskItems = [
           item.id.toString() !== e.target.dataset.key.toString()) // We use .toString() so we can use !== 
       })
     }
+
+    handleClear = () => {
+      this.setState({
+        taskList: []
+      })
+    }
   
     handleSubmit = (e) => {
       if (!this.state.newTaskName.length) {
@@ -63,7 +69,7 @@ const taskItems = [
             value={this.state.newTaskName}
             />
             <div className="todoControls">
-              <button>Clear Tasks</button>
+              <button onClick={this.handleClear}>Clear Tasks</button>
               <button>Clear Schedule</button>
             </div>
           <TaskHolder 
