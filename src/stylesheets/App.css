@@ -44,18 +44,12 @@ li:hover {
 }
 
 button {
-  background: var(--hover-list-color);
+  background: #f0f0f0;
   border: none;
   padding: 1rem;
-  color: var(--main-list-color);
-  border: 3px solid var(--main-list-color);
   border-radius: 5px;
-}
-
-button:hover {
-  background: var(--main-list-color);
-  color: var(--hover-list-color);
-  border: 3px solid var(--hover-list-color);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
 }
 
 
