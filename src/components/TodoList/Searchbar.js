@@ -2,11 +2,13 @@ import React from 'react';
 
 function SearchBar(props) {
     return (
-      <input 
-        type="text" 
-        value={props.value}
-        onChange={props.onChange}
-        placeholder="Search a task..." />
+      <form>
+        <input 
+          type="text" 
+          value={props.value}
+          onChange={props.onChange}
+          placeholder="Search a task..." />
+      </form>
     )
   }
 
