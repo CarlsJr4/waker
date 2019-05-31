@@ -21,8 +21,8 @@ import './stylesheets/todo.css';
 function App() {
   return (
     <Fragment>
-      <Calendar />
       <TodoContainer />
+      <Calendar />
     </Fragment>
   )
 }
