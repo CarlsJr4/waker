@@ -74,9 +74,6 @@ class App extends Component {
   }
 
   handleDecrement = (e) => {
-    if (this.checkCalendarLength()) {
-      return
-    };
     const updatedList = [...this.state.DraggedTaskList]
     const index = e.target.parentNode.dataset.index;
     let item = updatedList[index]
