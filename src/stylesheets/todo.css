@@ -15,11 +15,18 @@ input {
   .todoList {
     padding: 0 2rem;
     border-right: 1px dashed rgb(0, 0, 0, 0.25);
+    height: 100vh;
   }
   
   form {
     display: grid;
     grid-template-columns: 1fr auto;
+  }
+
+  .todo__list {
+    overflow-y: scroll;
+    height: 100%;
+    padding: 1rem;
   }
 
   .todo__list > li {

@@ -9,10 +9,8 @@ import './stylesheets/calendar.css';
 import './stylesheets/todo.css';
 
 // Today's goals:
-// Prevent tasks from going beyond 12:00pm
-// When dropping items, get timeLength attributes of all items. 
-// If they sum up to greater than max grid rows, do nothing and return an error. 
-// Also do this when incrementing items 
+// Direct drag and sort 
+// Push state to localstorage
 
 // Future goals:
 // 1. Edit list items?
