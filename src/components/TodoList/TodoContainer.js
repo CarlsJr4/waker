@@ -61,7 +61,7 @@ const taskItems = [
       return (
         <div className="todoList">
         <SimpleStorage parent={this} />
-         <h1>Your Saved Tasks:</h1>
+         <h1>Your Tasks:</h1>
           <SearchBar 
             value={this.state.searchTerm}
             onChange={this.handleChange} 

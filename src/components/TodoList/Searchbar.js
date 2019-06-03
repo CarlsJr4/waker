@@ -7,7 +7,7 @@ function SearchBar(props) {
           type="text" 
           value={props.value}
           onChange={props.onChange}
-          placeholder="Search a task..." />
+          placeholder="Search..." />
       </form>
     )
   }

@@ -5,7 +5,7 @@ function Add(props) {
       <form onSubmit={props.onSubmit}>
         <input
           type="text"
-          placeholder="Add items here..."
+          placeholder="Add items..."
           onChange={props.onChange}
           value={props.value}
           />
