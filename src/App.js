@@ -23,6 +23,7 @@ class App extends Component {
     TotalTimeLength: ''
   }
 
+  // Helper function to extract grid-template sizes from tasks, then update state
   updateCalendarLength = () => {
     const currentTasks = [...this.state.DraggedTaskList];
     const gridTotals = [];
@@ -34,16 +35,19 @@ class App extends Component {
     this.setState({ TotalTimeLength: totalGridSize});
   }
 
+  // Helper function to check if schedule size is large enough to cause CSS problems
   checkCalendarLength = () => {
     if (this.state.TotalTimeLength >= 13) {
-      alert('Your schedule is full.')
-      return
+      alert('Your morning schedule is full. Please delete or reduce times of tasks.');
+      return true 
     }
   }
 
   // This function is called when dragging a task into the droppable area. 
   onDrop = (item) => {
-    this.checkCalendarLength();
+    if (this.checkCalendarLength()) {
+      return
+    };
     const uuidv4 = require('uuid/v4');
     this.setState({
       DraggedTaskList: [...this.state.DraggedTaskList, 
@@ -55,7 +59,9 @@ class App extends Component {
   }
 
   handleIncrement = (e) => {
-    this.checkCalendarLength();
+    if (this.checkCalendarLength()) {
+      return
+    };
     const updatedList = [...this.state.DraggedTaskList]
     const index = e.target.parentNode.dataset.index;
     let item = updatedList[index]
@@ -65,7 +71,9 @@ class App extends Component {
   }
 
   handleDecrement = (e) => {
-    this.checkCalendarLength();
+    if (this.checkCalendarLength()) {
+      return
+    };
     const updatedList = [...this.state.DraggedTaskList]
     const index = e.target.parentNode.dataset.index;
     let item = updatedList[index]
