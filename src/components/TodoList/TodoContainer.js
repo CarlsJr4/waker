@@ -34,7 +34,7 @@ const taskItems = [
       })
     }
 
-    handleClear = () => {
+    handleClearTodo = () => {
       this.setState({
         taskList: []
       })
@@ -69,8 +69,8 @@ const taskItems = [
             value={this.state.newTaskName}
             />
             <div className="todoControls">
-              <button onClick={this.handleClear}>Clear Tasks</button>
-              <button>Clear Schedule</button>
+              <button onClick={this.handleClearTodo}>Clear Tasks</button>
+              <button onClick={this.props.handleClearSchedule}>Clear Schedule</button>
             </div>
           <TaskHolder 
             taskList={this.state.taskList} 
