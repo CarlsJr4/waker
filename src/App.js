@@ -2,15 +2,20 @@ import React, { Component, Fragment } from 'react';
 import TodoContainer from './components/TodoList/TodoContainer';
 import Calendar from './components/planner/Calendar';
 import HTML5Backend from 'react-dnd-html5-backend';
-import { DragDropContext } from 'react-dnd'
+import { DragDropContext } from 'react-dnd';
+import SimpleStorage from 'react-simple-storage';
 
 import './stylesheets/App.css';
 import './stylesheets/calendar.css';
 import './stylesheets/todo.css';
 
 // Today's goals:
-// Direct drag and sort 
 // Push state to localstorage
+// We can do this by pushing the state to localStorage every time it changes
+// This can be cumbersome. Several components of our application change the state. 
+// We should probably use a package to solve this problem. 
+// To render the state from localStorage, we need to use componentDidMount()?
+// Maybe we can save the state to localstorage when the session ends 
 
 // Future goals:
 // 1. Edit list items?
@@ -114,6 +119,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
+        <SimpleStorage parent={this} />
         <TodoContainer 
           handleClearSchedule={this.handleClearSchedule}
            />

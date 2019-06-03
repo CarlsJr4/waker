@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import SearchBar from './Searchbar';
 import TaskHolder from './Tasklist';
 import CreateItem from './Add';
+import SimpleStorage from 'react-simple-storage';
 
+// This placeholder task is here to introduce the user to placeholder tasks
 const taskItems = [
     {
       id: 1,
@@ -58,6 +60,7 @@ const taskItems = [
     render() {
       return (
         <div className="todoList">
+        <SimpleStorage parent={this} />
          <h1>Your Saved Tasks:</h1>
           <SearchBar 
             value={this.state.searchTerm}
