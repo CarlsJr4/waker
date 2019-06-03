@@ -108,9 +108,9 @@ class App extends Component {
 
   handleClearSchedule = () => {
     this.setState({
-      DraggedTaskList: []
+      DraggedTaskList: [],
+      TotalTimeLength: ''
     });
-    this.updateCalendarLength();
   }
 
   render() {
