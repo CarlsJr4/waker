@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import TaskTarget from  './TaskTarget';
 
-// Draw dotted lines somehow
-// Save the state to local history somehow?
-// Make the app look real pretty!
+// Draw dotted lines 
+// Save the state to local history 
+
+// Prevent tasks from going beyond 12:00pm
+// When dropping items, get timeLength attributes of all items. 
+// If they sum up to greater than max grid rows, do nothing and return an error. 
+// Also do this when incrementing items 
 
 class Calendar extends Component {
   render() {

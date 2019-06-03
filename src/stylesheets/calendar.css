@@ -15,7 +15,8 @@
   .calendar__times > h1 {
     padding-right: 2rem;
   }
- 
+
+  /* This is the list that holds all the tasks */
   .calendar__list {
     width: auto;
     display: grid;
