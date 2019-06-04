@@ -16,6 +16,16 @@
     padding-right: 2rem;
   }
 
+  .calendar__times > h1::after {
+    padding-top: 1rem;
+    right: 2rem;
+    content: '';
+    border-bottom: 2px dashed rgb(0, 0, 0, 0.25);
+    height: 1px;
+    width: 50%;
+    position: absolute;
+  }
+
   /* This is the list that holds all the tasks */
   .calendar__list {
     width: auto;
@@ -35,7 +45,6 @@
     grid-template-columns: 1fr auto auto auto;
     grid-gap: 15px;
     padding: 0 1rem;
-    /* max-width: 40%; */
     height: 100%;
   }
 

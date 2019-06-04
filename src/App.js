@@ -9,9 +9,6 @@ import './stylesheets/App.css';
 import './stylesheets/calendar.css';
 import './stylesheets/todo.css';
 
-// Today's goals:
-// Dotted lines
-
 // Future goals:
 // 1. Edit list items?
 
