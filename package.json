@@ -2,6 +2,7 @@
   "name": "dailyplan",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://carlsjr4.github.io/daily-planner/", 
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
@@ -10,8 +11,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "react-simple-storage": "^1.4.1",
-    "uuid": "^3.3.2",
-    "homepage":"https://carlsjr4.github.io/daily-planner/"
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "predeploy": "npm run build",
