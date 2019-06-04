@@ -2,7 +2,7 @@
   "name": "dailyplan",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://carlsjr4.github.io/daily-planner/", 
+  "homepage": "https://waker.dev",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
