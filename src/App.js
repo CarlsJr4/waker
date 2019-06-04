@@ -85,7 +85,22 @@ class App extends Component {
     this.setState({
       DraggedTaskList: updatedList
     });
-    this.updateCalendarLength();
+    
+    if (updatedList.length === 0) {
+      this.setState({
+        TotalTimeLength: ''
+      })
+    } else {
+      const currentTasks = [...updatedList];
+      const gridTotals = [];
+  
+      currentTasks.forEach(task => 
+         gridTotals.push(task.timeLength));
+  
+      const totalGridSize = [...gridTotals].reduce((accumulator, value) => accumulator + value);
+      this.setState({ TotalTimeLength: totalGridSize});
+
+    }
   }
 
   moveCard = (dragIndex, dropIndex) => {
