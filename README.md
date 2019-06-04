@@ -11,5 +11,9 @@ Waker is a to-do list app with additional functionalities. The goal of the proje
 - Increase or decrease the time intervals of tasks with interactive buttons
 - All tasks in your task pool and calendar are saved in localStorage for easy access. 
 
+## Important things to note:
+- This app uses the React-DnD library, which relies on the HTML5 drag and drop API.
+- This means that the app will not work devices with touchscreens. 
+
 
 
