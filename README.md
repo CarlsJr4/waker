@@ -1,6 +1,6 @@
 ## Waker - A time management app designed for early birds
 
-Waker is a to-do list app with additional functionalities. The goal of the project was to facilitate morning routine planning by providing a UI build to handle rapid schedule changes. 
+Waker is a to-do list app with additional functionalities. The goal of the project was to facilitate morning routine planning by providing a UI built to handle rapid schedule changes. Easily create tasks, delete and edit their time lengths, and drag and drop to sort them into your schedule as you see fit. 
 
 ## Features:
 - Create tasks to populate your task pool
