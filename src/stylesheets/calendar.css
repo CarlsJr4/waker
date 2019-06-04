@@ -18,7 +18,7 @@
 
   .calendar__times > h1::after {
     padding-top: 1rem;
-    right: 2rem;
+    margin-left: 1rem;
     content: '';
     border-bottom: 2px dashed rgb(0, 0, 0, 0.25);
     height: 1px;
