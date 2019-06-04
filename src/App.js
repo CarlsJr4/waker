@@ -10,12 +10,7 @@ import './stylesheets/calendar.css';
 import './stylesheets/todo.css';
 
 // Today's goals:
-// Push state to localstorage
-// We can do this by pushing the state to localStorage every time it changes
-// This can be cumbersome. Several components of our application change the state. 
-// We should probably use a package to solve this problem. 
-// To render the state from localStorage, we need to use componentDidMount()?
-// Maybe we can save the state to localstorage when the session ends 
+// Dotted lines
 
 // Future goals:
 // 1. Edit list items?
@@ -40,7 +35,7 @@ class App extends Component {
 
   // Helper function to check if schedule size is large enough to cause CSS problems
   checkCalendarLength = () => {
-    if (this.state.TotalTimeLength >= 13) {
+    if (this.state.TotalTimeLength >= 12) {
       alert('Your morning schedule is full. Please delete or reduce times of tasks.');
       return true 
     }
